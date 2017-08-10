@@ -7,7 +7,7 @@ import { Storage } from '@ionic/storage';
 })
 export class ConfigPage implements OnInit {
 
-  @Input('search') token: string = null;
+  @Input('token') token: string = null;
 
   constructor(private storage: Storage) {
   }
@@ -17,13 +17,11 @@ export class ConfigPage implements OnInit {
     // Or to get a key/value pair
     this.storage.get('token').then((val) => {
       this.token = val;
-      console.log(`buscou: ${val}`)
     });
   }
 
   saveToken(): void {
     this.storage.set('token', this.token);
-    console.log("salvou");
   }
 
 }

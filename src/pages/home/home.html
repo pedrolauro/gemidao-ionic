@@ -3,16 +3,26 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Send</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <h3>Send</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <ion-item>
+    <ion-label>From</ion-label>
+    <ion-input type="text" [(ngModel)]="from"></ion-input>
+  </ion-item>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-item>
+    <ion-label>To</ion-label>
+    <ion-input type="text" [(ngModel)]="to"></ion-input>
+  </ion-item>
+
+  <br/>
+  <br/>
+
+  <button ion-button full (click)="send()">Send</button>
+
 </ion-content>

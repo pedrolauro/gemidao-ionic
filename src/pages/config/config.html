@@ -8,6 +8,11 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Token TotalVoice</h3>
-  <ion-input type="text" [(ngModel)]="token" placeholder="Token" (ionChange)="saveToken()" ></ion-input>
+  <h3>TotalVoice</h3>
+
+  <ion-item>
+    <ion-label>Token</ion-label>
+    <ion-input type="text" [(ngModel)]="token" (ionChange)="saveToken()" ></ion-input>
+  </ion-item>
+
 </ion-content>
