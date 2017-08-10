@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="config"></ion-icon>
+    </button>
+    <ion-title>Config</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Token TotalVoice</h3>
+  <ion-input type="text" [(ngModel)]="token" placeholder="Token" (ionChange)="saveToken()" ></ion-input>
+</ion-content>
